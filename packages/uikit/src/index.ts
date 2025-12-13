@@ -17,6 +17,28 @@ export { NativeSelect, NativeSelectOption, NativeSelectOptGroup } from './base/n
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from './base/input-otp';
 export { Input } from './base/input';
 export { Label } from './base/label';
+export {
+  Field,
+  FieldSet,
+  FieldLegend,
+  FieldGroup,
+  FieldLabel,
+  FieldTitle,
+  FieldDescription,
+  FieldContent,
+  FieldSeparator,
+  FieldError,
+} from './base/field';
+export {
+  useFormField,
+  Form,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,
+  FormField,
+} from './base/form';
 export { Textarea } from './base/textarea';
 export { Switch } from './base/switch';
 export { Skeleton } from './base/skeleton';
@@ -148,6 +170,20 @@ export {
 
 // radix separator (divider lines)
 export { Separator } from './base/separator';
+
+// Item components
+export {
+  Item,
+  ItemGroup,
+  ItemSeparator,
+  ItemMedia,
+  ItemContent,
+  ItemTitle,
+  ItemDescription,
+  ItemActions,
+  ItemHeader,
+  ItemFooter,
+} from './base/item';
 
 // shadcn accordion
 export {
@@ -304,6 +340,10 @@ export { IconButton, type IconButtonProps } from './composite/buttons/IconButton
 export { DropdownButton, type DropdownButtonProps } from './composite/buttons/DropdownButton';
 // Re-export contract types to ensure consistency
 export { IconButtonSize } from '@hai3/uikit-contracts';
+
+// Composite form components
+export { InputGroup, InputGroupAddon, InputGroupButton, InputGroupText, InputGroupInput, InputGroupTextarea } from './base/input-group';
+export { DatePicker, DatePickerTrigger, DatePickerContent, DatePickerInput } from './base/date-picker';
 
 // Composite navigation (tailored from shadcn sidebar)
 export {

@@ -1242,3 +1242,711 @@ The UI kit translations SHALL provide localized strings for all 36 supported lan
 - **WHEN** viewing the label demo in a non-English language
 - **THEN** all label text, descriptions, and error messages display in the selected language
 - **AND** translations are contextually appropriate for form labeling conventions
+
+### Requirement: Item Component
+
+The UI kit SHALL provide Item, ItemGroup, ItemSeparator, ItemMedia, ItemContent, ItemTitle, ItemDescription, ItemActions, ItemHeader, and ItemFooter components for displaying structured content with media, title, description, and actions.
+
+#### Scenario: Item component is available
+
+- **WHEN** importing Item from `@hai3/uikit`
+- **THEN** all Item sub-components are available: Item, ItemGroup, ItemSeparator, ItemMedia, ItemContent, ItemTitle, ItemDescription, ItemActions, ItemHeader, ItemFooter
+- **AND** components support all standard React component props
+
+#### Scenario: Item with variant prop
+
+- **WHEN** using Item with variant="default"
+- **THEN** the item has transparent background and transparent border
+- **WHEN** using Item with variant="outline"
+- **THEN** the item has visible border using border-border token
+- **WHEN** using Item with variant="muted"
+- **THEN** the item has muted background using bg-muted/50 token
+
+#### Scenario: Item with size prop
+
+- **WHEN** using Item with size="default"
+- **THEN** the item has padding p-4 and gap-4
+- **WHEN** using Item with size="sm"
+- **THEN** the item has padding py-3 px-4 and gap-2.5
+
+#### Scenario: Item with asChild prop
+
+- **WHEN** using Item with asChild={true}
+- **THEN** the Item uses Slot component to merge props with child element
+- **WHEN** using Item with asChild={false} or omitted
+- **THEN** the Item renders as a div element
+
+#### Scenario: ItemGroup container
+
+- **WHEN** using ItemGroup to wrap multiple Item components
+- **THEN** items are grouped in a flex column layout
+- **AND** the container has role="list" and data-slot="item-group" attributes
+
+#### Scenario: ItemSeparator between items
+
+- **WHEN** using ItemSeparator between Item components
+- **THEN** a horizontal separator is rendered
+- **AND** the separator uses the Separator component with horizontal orientation
+- **AND** the separator has my-0 margin
+
+#### Scenario: ItemMedia with variant
+
+- **WHEN** using ItemMedia with variant="default"
+- **THEN** the media container has transparent background
+- **WHEN** using ItemMedia with variant="icon"
+- **THEN** the media container has size-8, border, rounded-sm, and bg-muted styling
+- **WHEN** using ItemMedia with variant="image"
+- **THEN** the media container has size-10, rounded-sm, and overflow-hidden styling
+
+#### Scenario: ItemContent wrapper
+
+- **WHEN** using ItemContent to wrap ItemTitle and ItemDescription
+- **THEN** the content is displayed in a flex column with gap-1
+- **AND** the content takes flex-1 to fill available space
+
+#### Scenario: ItemTitle display
+
+- **WHEN** using ItemTitle component
+- **THEN** the title is displayed with text-sm, leading-snug, and font-medium styling
+- **AND** the title has w-fit and items-center gap-2 layout
+
+#### Scenario: ItemDescription display
+
+- **WHEN** using ItemDescription component
+- **THEN** the description is displayed with text-muted-foreground, line-clamp-2, and text-sm styling
+- **AND** links within description have hover:text-primary and underline styling
+
+#### Scenario: ItemActions container
+
+- **WHEN** using ItemActions to wrap action buttons
+- **THEN** actions are displayed in a flex row with gap-2
+- **AND** actions are aligned with items-center
+
+#### Scenario: ItemHeader and ItemFooter
+
+- **WHEN** using ItemHeader or ItemFooter
+- **THEN** the header/footer spans full width with basis-full
+- **AND** content is arranged with flex items-center justify-between gap-2
+
+#### Scenario: Item focus and hover states
+
+- **WHEN** Item is rendered as a link (via asChild)
+- **THEN** hovering shows bg-accent/50 background
+- **AND** focus-visible shows border-ring and ring-ring/50 ring-[3px] styling
+
+### Requirement: Item Demo Examples
+
+The UI kit demo SHALL provide examples for the Item component in the Data Display category demonstrating basic item, variants, sizes, groups, and different media types, using `tk()` for translations.
+
+#### Scenario: Item section in DataDisplayElements
+
+- **WHEN** viewing the Data Display category
+- **THEN** an Item section is displayed with heading and examples
+- **AND** the section includes data-element-id="element-item" for navigation
+
+#### Scenario: Item examples use translations
+
+- **WHEN** Item examples are rendered
+- **THEN** all text content uses the `tk()` translation helper
+- **AND** all translated text is wrapped with TextLoader component
+
+#### Scenario: Multiple Item examples
+
+- **WHEN** viewing the Item section
+- **THEN** examples demonstrate:
+  - Basic item with media, title, description, and actions
+  - Item with different variants (default, outline, muted)
+  - Item with different sizes (default, sm)
+  - ItemGroup with multiple items and separators
+  - Item with header and footer sections
+  - Item with icon media variant
+  - Item with image media variant
+
+### Requirement: Item in Category System
+
+The UI kit element registry SHALL include 'Item' in the `IMPLEMENTED_ELEMENTS` array to mark it as an available component in the Data Display category.
+
+#### Scenario: Category Menu Shows Item
+
+- **WHEN** viewing the UIKit category menu
+- **THEN** Item appears as an implemented element in Data Display category
+- **AND** Item is positioned appropriately among other data display elements
+
+### Requirement: Item Translations
+
+The UI kit translations SHALL provide localized strings for all 36 supported languages with keys including:
+- `item_heading` - Section heading
+- `item_basic_label` - Basic example label
+- `item_variant_default_label` - Default variant example label
+- `item_variant_outline_label` - Outline variant example label
+- `item_variant_muted_label` - Muted variant example label
+- `item_size_default_label` - Default size example label
+- `item_size_sm_label` - Small size example label
+- `item_group_label` - Item group example label
+- `item_with_header_footer_label` - Header/footer example label
+- `item_icon_media_label` - Icon media example label
+- `item_image_media_label` - Image media example label
+- Additional keys for example content (titles, descriptions, action labels)
+
+#### Scenario: Translated Item Labels
+
+- **WHEN** viewing the Item demo in a non-English language
+- **THEN** all Item labels, titles, descriptions, and action text display in the selected language
+- **AND** translations are contextually appropriate for content display conventions
+
+### Requirement: Field Component
+
+The UI kit SHALL provide Field, FieldSet, FieldLegend, FieldGroup, FieldLabel, FieldTitle, FieldDescription, FieldContent, FieldSeparator, and FieldError components for composing accessible form fields with labels, controls, and help text.
+
+#### Scenario: Field component is available
+
+- **WHEN** importing Field from `@hai3/uikit`
+- **THEN** all Field sub-components are available: Field, FieldSet, FieldLegend, FieldGroup, FieldLabel, FieldTitle, FieldDescription, FieldContent, FieldSeparator, FieldError
+- **AND** components support all standard React component props
+
+#### Scenario: Field with orientation prop
+
+- **WHEN** using Field with orientation="vertical"
+- **THEN** the field is arranged in a flex column layout
+- **AND** all children take full width
+- **WHEN** using Field with orientation="horizontal"
+- **THEN** the field is arranged in a flex row layout
+- **AND** items are center-aligned
+- **AND** FieldLabel takes flex-auto width
+- **WHEN** using Field with orientation="responsive"
+- **THEN** the field uses vertical layout by default
+- **AND** switches to horizontal layout at medium breakpoint using container queries (@md/field-group)
+
+#### Scenario: Field with invalid state
+
+- **WHEN** Field has data-invalid="true" attribute
+- **THEN** the field displays destructive text color
+- **AND** FieldError component shows validation errors
+
+#### Scenario: FieldSet container
+
+- **WHEN** using FieldSet to wrap multiple Field components
+- **THEN** fields are grouped in a flex column with gap-6
+- **AND** the container uses semantic fieldset element
+- **AND** checkbox groups and radio groups have gap-3 spacing
+
+#### Scenario: FieldLegend with variant
+
+- **WHEN** using FieldLegend with variant="legend"
+- **THEN** the legend displays with text-base font size
+- **WHEN** using FieldLegend with variant="label"
+- **THEN** the legend displays with text-sm font size
+- **AND** the legend has mb-3 margin bottom
+
+#### Scenario: FieldGroup container
+
+- **WHEN** using FieldGroup to wrap multiple Field components
+- **THEN** fields are grouped in a flex column with gap-7
+- **AND** the container uses @container/field-group for container queries
+- **AND** nested FieldGroups have gap-4 spacing
+
+#### Scenario: FieldLabel component
+
+- **WHEN** using FieldLabel component
+- **THEN** the label wraps the Label component
+- **AND** the label has w-fit and gap-2 layout
+- **AND** the label respects group-data-[disabled=true]/field:opacity-50 styling
+- **AND** when containing Field components, the label becomes full-width with border and padding
+
+#### Scenario: FieldTitle component
+
+- **WHEN** using FieldTitle component
+- **THEN** the title displays with text-sm, leading-snug, and font-medium styling
+- **AND** the title has w-fit and items-center gap-2 layout
+- **AND** the title respects group-data-[disabled=true]/field:opacity-50 styling
+
+#### Scenario: FieldDescription component
+
+- **WHEN** using FieldDescription component
+- **THEN** the description displays with text-muted-foreground, text-sm styling
+- **AND** links within description have hover:text-primary and underline styling
+- **AND** the description has proper spacing with FieldLegend (nth-last-2:-mt-1)
+
+#### Scenario: FieldContent wrapper
+
+- **WHEN** using FieldContent to wrap FieldLabel and FieldDescription
+- **THEN** the content is displayed in a flex column with gap-1.5
+- **AND** the content takes flex-1 to fill available space
+- **AND** the content has leading-snug line height
+
+#### Scenario: FieldSeparator component
+
+- **WHEN** using FieldSeparator without children
+- **THEN** a horizontal separator line is rendered
+- **AND** the separator has relative positioning with -my-2 margin
+- **WHEN** using FieldSeparator with children
+- **THEN** the separator displays with content centered on the line
+- **AND** the content has bg-background and text-muted-foreground styling
+
+#### Scenario: FieldError component
+
+- **WHEN** using FieldError with children prop
+- **THEN** the error message is displayed
+- **WHEN** using FieldError with errors array containing single error
+- **THEN** the error message text is displayed
+- **WHEN** using FieldError with errors array containing multiple errors
+- **THEN** a bulleted list of error messages is displayed
+- **AND** duplicate error messages are deduplicated
+- **WHEN** FieldError has no children and empty errors array
+- **THEN** nothing is rendered (returns null)
+- **AND** the error has role="alert" for accessibility
+- **AND** the error uses text-destructive styling
+
+### Requirement: Field Demo Examples
+
+The UI kit demo SHALL provide examples for the Field component in the Forms & Inputs category demonstrating basic field, error handling, field groups, field sets, and different orientations, using `tk()` for translations.
+
+#### Scenario: Field section in FormElements
+
+- **WHEN** viewing the Forms & Inputs category
+- **THEN** a Field section is displayed with heading and examples
+- **AND** the section includes data-element-id="element-field" for navigation
+
+#### Scenario: Field examples use translations
+
+- **WHEN** Field examples are rendered
+- **THEN** all text content uses the `tk()` translation helper
+- **AND** all translated text is wrapped with TextLoader component
+
+#### Scenario: Multiple Field examples
+
+- **WHEN** viewing the Field section
+- **THEN** examples demonstrate:
+  - Basic field with label, input, and description
+  - Field with error message
+  - FieldGroup with multiple fields
+  - FieldSet with FieldLegend
+  - Field with horizontal orientation
+  - Field with responsive orientation
+  - FieldSeparator with content
+
+### Requirement: Field in Category System
+
+The UI kit element registry SHALL include 'Field' in the `IMPLEMENTED_ELEMENTS` array to mark it as an available component in the Forms & Inputs category.
+
+#### Scenario: Category Menu Shows Field
+
+- **WHEN** viewing the UIKit category menu
+- **THEN** Field appears as an implemented element in Forms & Inputs category
+- **AND** Field is positioned appropriately among other form elements
+
+### Requirement: Field Translations
+
+The UI kit translations SHALL provide localized strings for all 36 supported languages with keys including:
+- `field_heading` - Section heading
+- `field_basic_label` - Basic field example label
+- `field_error_label` - Field with error example label
+- `field_group_label` - Field group example label
+- `field_set_label` - Field set example label
+- `field_horizontal_label` - Horizontal orientation example label
+- `field_responsive_label` - Responsive orientation example label
+- `field_separator_label` - Field separator example label
+- Additional keys for example content (labels, descriptions, error messages, form field labels)
+
+#### Scenario: Translated Field Labels
+
+- **WHEN** viewing the Field demo in a non-English language
+- **THEN** all Field labels, descriptions, error messages, and form field text display in the selected language
+- **AND** translations are contextually appropriate for form conventions
+
+### Requirement: Input Group Component
+
+The UI kit SHALL provide InputGroup, InputGroupAddon, InputGroupButton, InputGroupText, InputGroupInput, and InputGroupTextarea components for composing enhanced input fields with addons, buttons, and labels.
+
+#### Scenario: Input Group component is available
+
+- **WHEN** importing InputGroup from `@hai3/uikit`
+- **THEN** all Input Group sub-components are available: InputGroup, InputGroupAddon, InputGroupButton, InputGroupText, InputGroupInput, InputGroupTextarea
+- **AND** components support all standard React component props
+
+#### Scenario: InputGroup container
+
+- **WHEN** using InputGroup to wrap input and addon components
+- **THEN** the container displays with border, rounded corners, and shadow
+- **AND** the container has role="group" for accessibility
+- **AND** the container adapts height for textarea (h-auto)
+- **AND** the container responds to focus states on child inputs
+- **AND** the container shows error state when child has aria-invalid="true"
+
+#### Scenario: InputGroupAddon with alignment variants
+
+- **WHEN** using InputGroupAddon with align="inline-start"
+- **THEN** the addon appears on the left side of the input
+- **AND** the addon has order-first and pl-3 padding
+- **WHEN** using InputGroupAddon with align="inline-end"
+- **THEN** the addon appears on the right side of the input
+- **AND** the addon has order-last and pr-3 padding
+- **WHEN** using InputGroupAddon with align="block-start"
+- **THEN** the addon appears above the input
+- **AND** the container becomes flex-col with h-auto
+- **AND** the addon has w-full and pt-3 padding
+- **WHEN** using InputGroupAddon with align="block-end"
+- **THEN** the addon appears below the input
+- **AND** the container becomes flex-col with h-auto
+- **AND** the addon has w-full and pb-3 padding
+
+#### Scenario: InputGroupButton with size variants
+
+- **WHEN** using InputGroupButton with size="xs"
+- **THEN** the button displays with h-6 and compact padding
+- **WHEN** using InputGroupButton with size="sm"
+- **THEN** the button displays with h-8 and standard padding
+- **WHEN** using InputGroupButton with size="icon-xs"
+- **THEN** the button displays as size-6 square icon button
+- **WHEN** using InputGroupButton with size="icon-sm"
+- **THEN** the button displays as size-8 square icon button
+- **AND** the button supports all Button variants (ghost, secondary, default, etc.)
+
+#### Scenario: InputGroupText component
+
+- **WHEN** using InputGroupText component
+- **THEN** the text displays with text-muted-foreground styling
+- **AND** the text has text-sm font size
+- **AND** icons within text have proper sizing and pointer-events-none
+
+#### Scenario: InputGroupInput component
+
+- **WHEN** using InputGroupInput component
+- **THEN** the input integrates with InputGroup container
+- **AND** the input has no border (border-0)
+- **AND** the input has transparent background
+- **AND** the input has no shadow
+- **AND** the input has no focus ring (focus-visible:ring-0)
+- **AND** the input takes flex-1 to fill available space
+- **AND** the input has data-slot="input-group-control" for focus state management
+
+#### Scenario: InputGroupTextarea component
+
+- **WHEN** using InputGroupTextarea component
+- **THEN** the textarea integrates with InputGroup container
+- **AND** the textarea has no border (border-0)
+- **AND** the textarea has transparent background
+- **AND** the textarea has no shadow
+- **AND** the textarea has no focus ring (focus-visible:ring-0)
+- **AND** the textarea has resize-none
+- **AND** the textarea takes flex-1 to fill available space
+- **AND** the textarea has data-slot="input-group-control" for focus state management
+
+#### Scenario: InputGroup focus state
+
+- **WHEN** a child input with data-slot="input-group-control" receives focus
+- **THEN** the InputGroup container shows focus ring (border-ring, ring-ring/50, ring-[3px])
+- **AND** the focus state is visually distinct
+
+#### Scenario: InputGroup error state
+
+- **WHEN** a child component has aria-invalid="true"
+- **THEN** the InputGroup container shows error styling (ring-destructive/20, border-destructive)
+- **AND** dark mode shows ring-destructive/40
+
+#### Scenario: InputGroupAddon click behavior
+
+- **WHEN** clicking on InputGroupAddon that doesn't contain a button
+- **THEN** the associated input receives focus
+- **AND** clicking on a button within addon does not trigger input focus
+
+### Requirement: Input Group Demo Examples
+
+The UI kit demo SHALL provide examples for the Input Group component in the Forms & Inputs category demonstrating button addons, icon buttons, label addons, and textarea with addons, using `tk()` for translations.
+
+#### Scenario: Input Group section in FormElements
+
+- **WHEN** viewing the Forms & Inputs category
+- **THEN** an Input Group section is displayed with heading and examples
+- **AND** the section includes data-element-id="element-input-group" for navigation
+
+#### Scenario: Input Group examples use translations
+
+- **WHEN** Input Group examples are rendered
+- **THEN** all text content uses the `tk()` translation helper
+- **AND** all translated text is wrapped with TextLoader component
+
+#### Scenario: Multiple Input Group examples
+
+- **WHEN** viewing the Input Group section
+- **THEN** examples demonstrate:
+  - Input with button addon (copy, search)
+  - Input with icon button addon (info, favorite)
+  - Input with label addon (inline and block alignment)
+  - Textarea with addons (code editor style with multiple addons)
+
+### Requirement: Input Group in Category System
+
+The UI kit element registry SHALL include 'Input Group' in the `IMPLEMENTED_ELEMENTS` array to mark it as an available component in the Forms & Inputs category.
+
+#### Scenario: Category Menu Shows Input Group
+
+- **WHEN** viewing the UIKit category menu
+- **THEN** Input Group appears as an implemented element in Forms & Inputs category
+- **AND** Input Group is positioned appropriately among other form elements
+
+### Requirement: Input Group Translations
+
+The UI kit translations SHALL provide localized strings for all 36 supported languages with keys including:
+- `input_group_heading` - Section heading
+- `input_group_button_label` - Button addon example label
+- `input_group_icon_label` - Icon button addon example label
+- `input_group_label_label` - Label addon example label
+- `input_group_textarea_label` - Textarea example label
+- Additional keys for example content (placeholders, button labels, tooltips)
+
+#### Scenario: Translated Input Group Labels
+
+- **WHEN** viewing the Input Group demo in a non-English language
+- **THEN** all Input Group labels, placeholders, button text, and tooltips display in the selected language
+- **AND** translations are contextually appropriate for form conventions
+
+### Requirement: Date Picker Composite Component
+
+The UI kit SHALL provide DatePicker, DatePickerTrigger, DatePickerContent, and DatePickerInput components as a composite element that combines Popover and Calendar for complete date selection experiences with button triggers, dropdown calendars, and optional input field integration.
+
+#### Scenario: DatePicker component is available
+
+Given a developer importing from @hai3/uikit
+When they import DatePicker, DatePickerTrigger, DatePickerContent, DatePickerInput
+Then all components should be available for use
+
+#### Scenario: Basic date picker with trigger
+
+Given a DatePicker component with DatePickerTrigger and DatePickerContent
+When the user clicks the trigger button
+Then a popover opens with a Calendar for date selection
+
+#### Scenario: Date picker with input variant
+
+Given a DatePickerInput component
+When the user types a date or clicks the calendar icon
+Then the date can be entered via keyboard or calendar selection
+
+#### Scenario: Date formatting
+
+Given a DatePicker with a selected date
+When the date is displayed in the trigger
+Then it should be formatted using the provided formatDate function or default locale format
+
+#### Scenario: Empty state placeholder
+
+Given a DatePicker with no selected date
+When viewing the trigger button
+Then a placeholder text should be displayed with muted styling
+
+### Requirement: Date Picker Demo Examples
+
+The UI kit demo SHALL provide examples for the Date Picker component in the Forms & Inputs category demonstrating:
+- Basic date picker with button trigger
+- Date of birth picker with dropdown calendar mode and label
+- Date picker with editable input field
+- Date and time picker combination
+
+#### Scenario: Date Picker section in FormElements
+
+Given a user viewing the Forms & Inputs category in UIKitElementsScreen
+When they scroll to the Date Picker section
+Then they should see the heading and 4 demo examples
+
+#### Scenario: Demo examples use translations
+
+Given a user viewing the Date Picker demos
+When the section renders
+Then all labels, placeholders, and descriptions should use `tk()` translation function
+
+#### Scenario: Date of birth picker example
+
+Given the date of birth picker demo
+When the user opens the calendar
+Then it should use `captionLayout="dropdown"` for easy year/month selection
+
+#### Scenario: Date and time picker example
+
+Given the date and time picker demo
+When viewing the example
+Then it should show a date picker alongside a time input field
+
+### Requirement: Date Picker in Category System
+
+The UI kit element registry SHALL include 'Date Picker' in the IMPLEMENTED_ELEMENTS array to mark it as an available component in the Forms & Inputs category.
+
+#### Scenario: Date Picker in IMPLEMENTED_ELEMENTS
+
+Given the uikitCategories.ts file
+When checking the IMPLEMENTED_ELEMENTS array
+Then 'Date Picker' should be present and alphabetically ordered
+
+#### Scenario: Category menu shows Date Picker
+
+Given a user viewing the UIKit category menu
+When they navigate to Forms & Inputs
+Then Date Picker should appear in the element list
+
+### Requirement: Date Picker Translations
+
+The UI kit translations SHALL provide localized strings for all 36 supported languages with keys including:
+- `date_picker_heading` - Section heading
+- `date_picker_basic_label` - Basic example label
+- `date_picker_basic_placeholder` - Placeholder text
+- `date_picker_dob_label` - Date of birth label
+- `date_picker_dob_field_label` - Field label for DOB
+- `date_picker_input_label` - Input variant label
+- `date_picker_input_field_label` - Field label for input variant
+- `date_picker_input_placeholder` - Placeholder for input
+- `date_picker_datetime_label` - Date and time label
+- `date_picker_date_label` - Date field label
+- `date_picker_time_label` - Time field label
+- `date_picker_select_date` - Select date placeholder
+
+#### Scenario: Translation keys exist
+
+Given any of the 36 supported language files
+When checking for date_picker_* keys
+Then all required keys should be present
+
+#### Scenario: Translated Date Picker labels
+
+Given a user viewing the date picker demo in a non-English language
+When the component renders
+Then all labels and placeholders should appear in the selected language
+
+### Requirement: Form Composite Component
+
+The UI kit SHALL provide Form, FormField, FormItem, FormLabel, FormControl, FormDescription, and FormMessage components as a composite element that wraps react-hook-form for controlled form state management with schema validation and automatic accessibility attributes.
+
+#### Scenario: Form component is available
+
+Given a developer importing from @hai3/uikit
+When they import Form, FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage
+Then all components should be available for use
+
+#### Scenario: Form with zod validation
+
+Given a form schema defined with zod
+When the form is submitted with invalid data
+Then validation errors are displayed in FormMessage components
+And aria-invalid is set to true on invalid fields
+
+#### Scenario: Form field accessibility
+
+Given a FormItem with FormLabel, FormControl, FormDescription, and FormMessage
+When the FormItem renders
+Then FormControl has aria-describedby linking to description and message IDs
+And FormLabel htmlFor points to the control element ID
+
+### Requirement: FormField Controller Integration
+
+The FormField component SHALL wrap react-hook-form's Controller and provide field context to descendant components via FormFieldContext.
+
+#### Scenario: FormField with render prop
+
+Given a FormField with name and render prop
+When the field renders
+Then the render prop receives field state and handlers from react-hook-form
+And FormFieldContext provides the field name to descendants
+
+#### Scenario: FormField error state
+
+Given a FormField with a validation error
+When the field is invalid
+Then useFormField hook returns the error state
+And FormLabel displays with destructive styling
+
+### Requirement: FormItem ID Generation
+
+Each FormItem component SHALL generate unique IDs via React.useId() for accessibility linking between label, control, description, and message elements.
+
+#### Scenario: Unique IDs per FormItem
+
+Given multiple FormItems in a form
+When they render
+Then each has unique IDs generated via React.useId()
+And child components use correct ID patterns (formItemId, formDescriptionId, formMessageId)
+
+#### Scenario: Aria attributes linkage
+
+Given a FormItem with all child components
+When FormControl renders
+Then aria-describedby includes formDescriptionId and formMessageId when error exists
+And id is set to formItemId
+
+### Requirement: useFormField Hook
+
+The UI kit SHALL export a useFormField hook that provides access to form field state including id, name, formItemId, formDescriptionId, formMessageId, and error state.
+
+#### Scenario: useFormField in custom component
+
+Given a custom component inside FormItem
+When calling useFormField()
+Then it returns the field context with all ID values and error state
+
+#### Scenario: useFormField outside FormField
+
+Given useFormField called outside a FormField
+When the hook executes
+Then it throws an error indicating it should be used within FormField
+
+### Requirement: Form Demo Examples
+
+The UI kit demo SHALL provide examples for the Form component in the Forms & Inputs category demonstrating:
+- Profile form with username field using zod validation (min 2 chars)
+- FormField with render prop pattern for controlled input
+- FormLabel, FormControl, FormDescription, and FormMessage composition
+- Form submission with validation feedback
+
+#### Scenario: Form section in FormElements
+
+Given a user viewing the Forms & Inputs category in UIKitElementsScreen
+When they scroll to the Form section
+Then they should see the heading and profile form demo example
+
+#### Scenario: Profile form structure
+
+Given the profile form demo
+When viewing the form
+Then it should display a username field with label "Username"
+And a description "This is your public display name."
+And a Submit button
+
+#### Scenario: Profile form validation error
+
+Given the profile form demo with empty or single-character input
+When the user clicks Submit
+Then a validation error "Username must be at least 2 characters." appears in FormMessage
+And the input shows aria-invalid="true"
+And the form does not submit
+
+#### Scenario: Profile form successful submission
+
+Given the profile form demo with valid input (2+ characters)
+When the user clicks Submit
+Then no validation errors appear
+And the form submits successfully (console.log or toast)
+
+#### Scenario: Demo uses zodResolver
+
+Given the profile form demo implementation
+When examining the useForm configuration
+Then it should use zodResolver with a zod schema for validation
+
+### Requirement: Form in Category System
+
+The UI kit element registry SHALL include 'Form' in the IMPLEMENTED_ELEMENTS array to mark it as an available component in the Forms & Inputs category.
+
+#### Scenario: Form in IMPLEMENTED_ELEMENTS
+
+Given the uikitCategories.ts file
+When checking the IMPLEMENTED_ELEMENTS array
+Then 'Form' should be present and alphabetically ordered
+
+### Requirement: Form Translations
+
+The UI kit translations SHALL provide localized strings for all 36 supported languages with keys including form_heading and form demo labels.
+
+#### Scenario: Translation keys exist
+
+Given any of the 36 supported language files
+When checking for form_* keys
+Then all required keys should be present
+
