@@ -3,10 +3,10 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
-import { cn } from "../../lib/utils"
-import { Button } from "../../base/button"
-import { Input } from "../../base/input"
-import { Textarea } from "../../base/textarea"
+import { cn } from "../lib/utils"
+import { Button } from "./button"
+import { Input } from "./input"
+import { Textarea } from "./textarea"
 import { ButtonVariant } from "@hai3/uikit-contracts"
 
 function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
@@ -169,4 +169,3 @@ export {
   InputGroupInput,
   InputGroupTextarea,
 }
-

@@ -28,7 +28,7 @@ export {
   FieldContent,
   FieldSeparator,
   FieldError,
-} from './composite/forms/field';
+} from './base/field';
 export {
   useFormField,
   Form,
@@ -171,7 +171,7 @@ export {
 // radix separator (divider lines)
 export { Separator } from './base/separator';
 
-// Item components (composite)
+// Item components
 export {
   Item,
   ItemGroup,
@@ -183,7 +183,7 @@ export {
   ItemActions,
   ItemHeader,
   ItemFooter,
-} from './composite/lists/item';
+} from './base/item';
 
 // shadcn accordion
 export {
@@ -342,8 +342,8 @@ export { DropdownButton, type DropdownButtonProps } from './composite/buttons/Dr
 export { IconButtonSize } from '@hai3/uikit-contracts';
 
 // Composite form components
-export { InputGroup, InputGroupAddon, InputGroupButton, InputGroupText, InputGroupInput, InputGroupTextarea } from './composite/forms/input-group';
-export { DatePicker, DatePickerTrigger, DatePickerContent, DatePickerInput } from './composite/forms/date-picker';
+export { InputGroup, InputGroupAddon, InputGroupButton, InputGroupText, InputGroupInput, InputGroupTextarea } from './base/input-group';
+export { DatePicker, DatePickerTrigger, DatePickerContent, DatePickerInput } from './base/date-picker';
 
 // Composite navigation (tailored from shadcn sidebar)
 export {
