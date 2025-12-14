@@ -568,6 +568,9 @@
   "table_method_paypal": "PayPal",
   "table_method_bank": "Banka Havalesi",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
   "table_total": "Toplam",
   "data_table_heading": "Veri Tablosu",
   "data_table_select_all": "Tümünü seç",
@@ -577,7 +580,10 @@
   "data_table_amount": "Tutar",
   "data_table_filter_placeholder": "E-posta filtrele...",
   "data_table_no_results": "Sonuç yok."
+<<<<<<< HEAD
 =======
   "table_total": "Toplam"
 >>>>>>> 8d900bf (feat(ui): implement table base ui kit element)
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
 }

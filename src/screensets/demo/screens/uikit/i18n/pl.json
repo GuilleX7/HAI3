@@ -568,6 +568,9 @@
   "table_method_paypal": "PayPal",
   "table_method_bank": "Przelew",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
   "table_total": "Suma",
   "data_table_heading": "Tabela Danych",
   "data_table_select_all": "Zaznacz wszystko",
@@ -577,7 +580,10 @@
   "data_table_amount": "Kwota",
   "data_table_filter_placeholder": "Filtruj e-maile...",
   "data_table_no_results": "Brak wyników."
+<<<<<<< HEAD
 =======
   "table_total": "Suma"
 >>>>>>> 8d900bf (feat(ui): implement table base ui kit element)
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
 }

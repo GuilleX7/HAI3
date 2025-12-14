@@ -568,6 +568,9 @@
   "table_method_paypal": "PayPal",
   "table_method_bank": "بینک ٹرانسفر",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
   "table_total": "کل",
   "data_table_heading": "ڈیٹا ٹیبل",
   "data_table_select_all": "سب منتخب کریں",
@@ -577,7 +580,10 @@
   "data_table_amount": "رقم",
   "data_table_filter_placeholder": "ای میل فلٹر...",
   "data_table_no_results": "کوئی نتائج نہیں۔"
+<<<<<<< HEAD
 =======
   "table_total": "کل"
 >>>>>>> 8d900bf (feat(ui): implement table base ui kit element)
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
 }

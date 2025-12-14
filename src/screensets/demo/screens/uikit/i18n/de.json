@@ -568,6 +568,9 @@
   "table_method_paypal": "PayPal",
   "table_method_bank": "Überweisung",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
   "table_total": "Gesamt",
   "data_table_heading": "Datentabelle",
   "data_table_select_all": "Alle auswählen",
@@ -577,7 +580,10 @@
   "data_table_amount": "Betrag",
   "data_table_filter_placeholder": "E-Mails filtern...",
   "data_table_no_results": "Keine Ergebnisse."
+<<<<<<< HEAD
 =======
   "table_total": "Gesamt"
 >>>>>>> 8d900bf (feat(ui): implement table base ui kit element)
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
 }

@@ -568,6 +568,9 @@
   "table_method_paypal": "PayPal",
   "table_method_bank": "Överföring",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
   "table_total": "Totalt",
   "data_table_heading": "Datatabell",
   "data_table_select_all": "Välj alla",
@@ -577,7 +580,10 @@
   "data_table_amount": "Belopp",
   "data_table_filter_placeholder": "Filtrera e-post...",
   "data_table_no_results": "Inga resultat."
+<<<<<<< HEAD
 =======
   "table_total": "Totalt"
 >>>>>>> 8d900bf (feat(ui): implement table base ui kit element)
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
 }

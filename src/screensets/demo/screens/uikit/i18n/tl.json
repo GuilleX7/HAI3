@@ -568,6 +568,9 @@
   "table_method_paypal": "PayPal",
   "table_method_bank": "Bank Transfer",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
   "table_total": "Kabuuan",
   "data_table_heading": "Talahanayan ng Data",
   "data_table_select_all": "Piliin lahat",
@@ -577,7 +580,10 @@
   "data_table_amount": "Halaga",
   "data_table_filter_placeholder": "I-filter ang email...",
   "data_table_no_results": "Walang resulta."
+<<<<<<< HEAD
 =======
   "table_total": "Kabuuan"
 >>>>>>> 8d900bf (feat(ui): implement table base ui kit element)
+=======
+>>>>>>> dcd7435 (feat(ui): implement data table base ui kit element)
 }
