@@ -652,5 +652,10 @@
   "toggle_disabled_label": "מושבת",
   "toggle_italic": "נטוי",
   "toggle_bookmark": "סימנייה",
-  "toggle_with_text_label": "עם טקסט"
+  "toggle_with_text_label": "עם טקסט",
+  "toggle_group_heading": "קבוצת החלפה",
+  "toggle_group_single_label": "יחיד",
+  "toggle_group_outline_label": "קו מתאר",
+  "toggle_group_spacing_label": "עם רווח",
+  "toggle_group_disabled_label": "מושבת"
 }

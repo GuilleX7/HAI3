@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Zakázáno",
   "toggle_italic": "Kurzíva",
   "toggle_bookmark": "Záložka",
-  "toggle_with_text_label": "S textem"
+  "toggle_with_text_label": "S textem",
+  "toggle_group_heading": "Skupina přepínačů",
+  "toggle_group_single_label": "Jednotlivý",
+  "toggle_group_outline_label": "Obrys",
+  "toggle_group_spacing_label": "S mezerami",
+  "toggle_group_disabled_label": "Zakázáno"
 }

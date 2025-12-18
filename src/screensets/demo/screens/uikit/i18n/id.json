@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Nonaktif",
   "toggle_italic": "Miring",
   "toggle_bookmark": "Penanda",
-  "toggle_with_text_label": "Dengan teks"
+  "toggle_with_text_label": "Dengan teks",
+  "toggle_group_heading": "Grup Sakelar",
+  "toggle_group_single_label": "Tunggal",
+  "toggle_group_outline_label": "Garis tepi",
+  "toggle_group_spacing_label": "Dengan jarak",
+  "toggle_group_disabled_label": "Nonaktif"
 }

@@ -652,5 +652,10 @@
   "toggle_disabled_label": "停用",
   "toggle_italic": "斜體",
   "toggle_bookmark": "書籤",
-  "toggle_with_text_label": "帶文字"
+  "toggle_with_text_label": "帶文字",
+  "toggle_group_heading": "切換組",
+  "toggle_group_single_label": "單選",
+  "toggle_group_outline_label": "輪廓",
+  "toggle_group_spacing_label": "帶間距",
+  "toggle_group_disabled_label": "停用"
 }

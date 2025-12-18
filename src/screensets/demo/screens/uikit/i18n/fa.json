@@ -652,5 +652,10 @@
   "toggle_disabled_label": "غیرفعال",
   "toggle_italic": "کج",
   "toggle_bookmark": "نشانک",
-  "toggle_with_text_label": "با متن"
+  "toggle_with_text_label": "با متن",
+  "toggle_group_heading": "گروه تغییر وضعیت",
+  "toggle_group_single_label": "تکی",
+  "toggle_group_outline_label": "خطوط",
+  "toggle_group_spacing_label": "با فاصله",
+  "toggle_group_disabled_label": "غیرفعال"
 }

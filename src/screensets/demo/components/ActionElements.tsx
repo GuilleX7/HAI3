@@ -22,6 +22,8 @@ import {
   CommandSeparator,
   CommandShortcut,
   Toggle,
+  ToggleGroup,
+  ToggleGroupItem,
 } from '@hai3/uikit';
 import { useTranslation, TextLoader } from '@hai3/uicore';
 import { StarIcon } from '../uikit/icons/StarIcon';
@@ -40,6 +42,8 @@ import {
   ItalicIcon,
   BookmarkIcon,
   UnderlineIcon,
+  BoldIcon,
+  HeartIcon,
 } from 'lucide-react';
 import { DEMO_SCREENSET_ID } from "../ids";
 import { UI_KIT_ELEMENTS_SCREEN_ID } from "../ids";
@@ -503,6 +507,116 @@ export const ActionElements: React.FC = () => {
               <Toggle aria-label="Toggle underline" variant="outline" size="lg" disabled>
                 <UnderlineIcon />
               </Toggle>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Toggle Group Element Block */}
+      <div data-element-id="element-toggle-group" className="flex flex-col gap-4">
+        <TextLoader skeletonClassName="h-8 w-32">
+          <h2 className="text-2xl font-semibold">
+            {tk('toggle_group_heading')}
+          </h2>
+        </TextLoader>
+        <div className="flex flex-col gap-4 p-6 border border-border rounded-lg bg-background overflow-hidden">
+          {/* Single Selection */}
+          <div className="flex flex-col gap-2">
+            <TextLoader skeletonClassName="h-5 w-24">
+              <span className="text-sm text-muted-foreground font-medium">
+                {tk('toggle_group_single_label')}
+              </span>
+            </TextLoader>
+            <div className="flex items-center gap-2">
+              <ToggleGroup type="single">
+                <ToggleGroupItem value="bold" aria-label="Toggle bold">
+                  <BoldIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem value="italic" aria-label="Toggle italic">
+                  <ItalicIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem value="underline" aria-label="Toggle underline">
+                  <UnderlineIcon />
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+          </div>
+
+          {/* Outline Variant */}
+          <div className="flex flex-col gap-2">
+            <TextLoader skeletonClassName="h-5 w-28">
+              <span className="text-sm text-muted-foreground font-medium">
+                {tk('toggle_group_outline_label')}
+              </span>
+            </TextLoader>
+            <div className="flex items-center gap-2">
+              <ToggleGroup type="multiple" variant="outline">
+                <ToggleGroupItem value="bold" aria-label="Toggle bold">
+                  <BoldIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem value="italic" aria-label="Toggle italic">
+                  <ItalicIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem value="underline" aria-label="Toggle underline">
+                  <UnderlineIcon />
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+          </div>
+
+          {/* With Spacing */}
+          <div className="flex flex-col gap-2">
+            <TextLoader skeletonClassName="h-5 w-24">
+              <span className="text-sm text-muted-foreground font-medium">
+                {tk('toggle_group_spacing_label')}
+              </span>
+            </TextLoader>
+            <div className="flex items-center gap-2">
+              <ToggleGroup type="multiple" variant="outline" spacing={1} size="sm">
+                <ToggleGroupItem
+                  value="star"
+                  aria-label="Toggle star"
+                  className="[&_svg]:data-[state=on]:fill-current"
+                >
+                  <StarIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="heart"
+                  aria-label="Toggle heart"
+                  className="[&_svg]:data-[state=on]:fill-current"
+                >
+                  <HeartIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem
+                  value="bookmark"
+                  aria-label="Toggle bookmark"
+                  className="[&_svg]:data-[state=on]:fill-current"
+                >
+                  <BookmarkIcon />
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+          </div>
+
+          {/* Disabled */}
+          <div className="flex flex-col gap-2">
+            <TextLoader skeletonClassName="h-5 w-20">
+              <span className="text-sm text-muted-foreground font-medium">
+                {tk('toggle_group_disabled_label')}
+              </span>
+            </TextLoader>
+            <div className="flex items-center gap-2">
+              <ToggleGroup type="multiple" variant="outline" disabled>
+                <ToggleGroupItem value="bold" aria-label="Toggle bold">
+                  <BoldIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem value="italic" aria-label="Toggle italic">
+                  <ItalicIcon />
+                </ToggleGroupItem>
+                <ToggleGroupItem value="underline" aria-label="Toggle underline">
+                  <UnderlineIcon />
+                </ToggleGroupItem>
+              </ToggleGroup>
             </div>
           </div>
         </div>

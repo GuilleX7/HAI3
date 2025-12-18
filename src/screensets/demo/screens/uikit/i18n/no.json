@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Deaktivert",
   "toggle_italic": "Kursiv",
   "toggle_bookmark": "Bokmerke",
-  "toggle_with_text_label": "Med tekst"
+  "toggle_with_text_label": "Med tekst",
+  "toggle_group_heading": "Vekslegruppe",
+  "toggle_group_single_label": "Enkelt",
+  "toggle_group_outline_label": "Omriss",
+  "toggle_group_spacing_label": "Med mellomrom",
+  "toggle_group_disabled_label": "Deaktivert"
 }

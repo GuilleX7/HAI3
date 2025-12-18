@@ -417,6 +417,7 @@ export {
 
 // Toggle
 export { Toggle, toggleVariants } from './base/toggle';
+export { ToggleGroup, ToggleGroupItem } from './base/toggle-group';
 
 // Composite components
 export { IconButton, type IconButtonProps } from './composite/buttons/IconButton';

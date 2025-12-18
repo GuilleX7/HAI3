@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Desativado",
   "toggle_italic": "Itálico",
   "toggle_bookmark": "Favorito",
-  "toggle_with_text_label": "Com texto"
+  "toggle_with_text_label": "Com texto",
+  "toggle_group_heading": "Grupo de alternância",
+  "toggle_group_single_label": "Único",
+  "toggle_group_outline_label": "Contorno",
+  "toggle_group_spacing_label": "Com espaçamento",
+  "toggle_group_disabled_label": "Desativado"
 }

@@ -216,5 +216,6 @@ export const IMPLEMENTED_ELEMENTS = [
   'Tabs',
   'Textarea',
   'Toggle',
+  'Toggle Group',
   'Tooltip',
 ];

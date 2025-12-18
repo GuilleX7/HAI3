@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Désactivé",
   "toggle_italic": "Italique",
   "toggle_bookmark": "Signet",
-  "toggle_with_text_label": "Avec texte"
+  "toggle_with_text_label": "Avec texte",
+  "toggle_group_heading": "Groupe de bascule",
+  "toggle_group_single_label": "Unique",
+  "toggle_group_outline_label": "Contour",
+  "toggle_group_spacing_label": "Avec espacement",
+  "toggle_group_disabled_label": "Désactivé"
 }

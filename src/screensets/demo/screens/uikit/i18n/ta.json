@@ -652,5 +652,10 @@
   "toggle_disabled_label": "முடக்கப்பட்டது",
   "toggle_italic": "சாய்வு",
   "toggle_bookmark": "புத்தகக்குறி",
-  "toggle_with_text_label": "உரையுடன்"
+  "toggle_with_text_label": "உரையுடன்",
+  "toggle_group_heading": "மாற்று குழு",
+  "toggle_group_single_label": "ஒற்றை",
+  "toggle_group_outline_label": "வெளிக்கோடு",
+  "toggle_group_spacing_label": "இடைவெளியுடன்",
+  "toggle_group_disabled_label": "முடக்கப்பட்டது"
 }

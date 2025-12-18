@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Poistettu käytöstä",
   "toggle_italic": "Kursiivi",
   "toggle_bookmark": "Kirjanmerkki",
-  "toggle_with_text_label": "Tekstillä"
+  "toggle_with_text_label": "Tekstillä",
+  "toggle_group_heading": "Vaihtoryhmä",
+  "toggle_group_single_label": "Yksittäinen",
+  "toggle_group_outline_label": "Ääriviiva",
+  "toggle_group_spacing_label": "Väleillä",
+  "toggle_group_disabled_label": "Poistettu käytöstä"
 }

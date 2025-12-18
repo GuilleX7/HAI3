@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Wyłączony",
   "toggle_italic": "Kursywa",
   "toggle_bookmark": "Zakładka",
-  "toggle_with_text_label": "Z tekstem"
+  "toggle_with_text_label": "Z tekstem",
+  "toggle_group_heading": "Grupa przełączników",
+  "toggle_group_single_label": "Pojedynczy",
+  "toggle_group_outline_label": "Kontur",
+  "toggle_group_spacing_label": "Z odstępami",
+  "toggle_group_disabled_label": "Wyłączony"
 }

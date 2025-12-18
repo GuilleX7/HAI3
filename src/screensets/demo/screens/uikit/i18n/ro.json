@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Dezactivat",
   "toggle_italic": "Italic",
   "toggle_bookmark": "Semn de carte",
-  "toggle_with_text_label": "Cu text"
+  "toggle_with_text_label": "Cu text",
+  "toggle_group_heading": "Grup de comutare",
+  "toggle_group_single_label": "Simplu",
+  "toggle_group_outline_label": "Contur",
+  "toggle_group_spacing_label": "Cu spațiere",
+  "toggle_group_disabled_label": "Dezactivat"
 }

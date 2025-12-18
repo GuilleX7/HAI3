@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Devre dışı",
   "toggle_italic": "İtalik",
   "toggle_bookmark": "Yer imi",
-  "toggle_with_text_label": "Metinli"
+  "toggle_with_text_label": "Metinli",
+  "toggle_group_heading": "Değiştirme Grubu",
+  "toggle_group_single_label": "Tekli",
+  "toggle_group_outline_label": "Ana hat",
+  "toggle_group_spacing_label": "Boşluklu",
+  "toggle_group_disabled_label": "Devre dışı"
 }

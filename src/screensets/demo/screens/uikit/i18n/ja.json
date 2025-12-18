@@ -652,5 +652,10 @@
   "toggle_disabled_label": "無効",
   "toggle_italic": "イタリック",
   "toggle_bookmark": "ブックマーク",
-  "toggle_with_text_label": "テキスト付き"
+  "toggle_with_text_label": "テキスト付き",
+  "toggle_group_heading": "トグルグループ",
+  "toggle_group_single_label": "単一",
+  "toggle_group_outline_label": "アウトライン",
+  "toggle_group_spacing_label": "間隔付き",
+  "toggle_group_disabled_label": "無効"
 }

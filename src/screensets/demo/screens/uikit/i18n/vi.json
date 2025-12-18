@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Vô hiệu hóa",
   "toggle_italic": "Nghiêng",
   "toggle_bookmark": "Đánh dấu",
-  "toggle_with_text_label": "Có văn bản"
+  "toggle_with_text_label": "Có văn bản",
+  "toggle_group_heading": "Nhóm chuyển đổi",
+  "toggle_group_single_label": "Đơn",
+  "toggle_group_outline_label": "Viền",
+  "toggle_group_spacing_label": "Có khoảng cách",
+  "toggle_group_disabled_label": "Vô hiệu hóa"
 }

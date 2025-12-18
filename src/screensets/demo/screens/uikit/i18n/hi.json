@@ -652,5 +652,10 @@
   "toggle_disabled_label": "अक्षम",
   "toggle_italic": "इटैलिक",
   "toggle_bookmark": "बुकमार्क",
-  "toggle_with_text_label": "टेक्स्ट के साथ"
+  "toggle_with_text_label": "टेक्स्ट के साथ",
+  "toggle_group_heading": "टॉगल समूह",
+  "toggle_group_single_label": "एकल",
+  "toggle_group_outline_label": "आउटलाइन",
+  "toggle_group_spacing_label": "स्पेसिंग के साथ",
+  "toggle_group_disabled_label": "अक्षम"
 }

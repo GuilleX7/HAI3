@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Dilumpuhkan",
   "toggle_italic": "Italik",
   "toggle_bookmark": "Penanda halaman",
-  "toggle_with_text_label": "Dengan teks"
+  "toggle_with_text_label": "Dengan teks",
+  "toggle_group_heading": "Kumpulan Togol",
+  "toggle_group_single_label": "Tunggal",
+  "toggle_group_outline_label": "Garis luar",
+  "toggle_group_spacing_label": "Dengan jarak",
+  "toggle_group_disabled_label": "Dilumpuhkan"
 }

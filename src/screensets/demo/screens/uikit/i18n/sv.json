@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Inaktiverad",
   "toggle_italic": "Kursiv",
   "toggle_bookmark": "Bokmärke",
-  "toggle_with_text_label": "Med text"
+  "toggle_with_text_label": "Med text",
+  "toggle_group_heading": "Växlingsgrupp",
+  "toggle_group_single_label": "Enkel",
+  "toggle_group_outline_label": "Kontur",
+  "toggle_group_spacing_label": "Med avstånd",
+  "toggle_group_disabled_label": "Inaktiverad"
 }

@@ -652,5 +652,10 @@
   "toggle_disabled_label": "غیر فعال",
   "toggle_italic": "ترچھا",
   "toggle_bookmark": "بک مارک",
-  "toggle_with_text_label": "متن کے ساتھ"
+  "toggle_with_text_label": "متن کے ساتھ",
+  "toggle_group_heading": "ٹوگل گروپ",
+  "toggle_group_single_label": "سنگل",
+  "toggle_group_outline_label": "آؤٹ لائن",
+  "toggle_group_spacing_label": "فاصلے کے ساتھ",
+  "toggle_group_disabled_label": "غیر فعال"
 }

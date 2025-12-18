@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Imezimwa",
   "toggle_italic": "Mlazo",
   "toggle_bookmark": "Alama ya kusoma",
-  "toggle_with_text_label": "Na maandishi"
+  "toggle_with_text_label": "Na maandishi",
+  "toggle_group_heading": "Kikundi cha Kubadilisha",
+  "toggle_group_single_label": "Moja",
+  "toggle_group_outline_label": "Muhtasari",
+  "toggle_group_spacing_label": "Na nafasi",
+  "toggle_group_disabled_label": "Imezimwa"
 }

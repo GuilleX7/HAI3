@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Disabilitato",
   "toggle_italic": "Corsivo",
   "toggle_bookmark": "Segnalibro",
-  "toggle_with_text_label": "Con testo"
+  "toggle_with_text_label": "Con testo",
+  "toggle_group_heading": "Gruppo interruttori",
+  "toggle_group_single_label": "Singolo",
+  "toggle_group_outline_label": "Contorno",
+  "toggle_group_spacing_label": "Con spaziatura",
+  "toggle_group_disabled_label": "Disabilitato"
 }

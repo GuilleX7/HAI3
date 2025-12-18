@@ -652,5 +652,10 @@
   "toggle_disabled_label": "禁用",
   "toggle_italic": "斜体",
   "toggle_bookmark": "书签",
-  "toggle_with_text_label": "带文本"
+  "toggle_with_text_label": "带文本",
+  "toggle_group_heading": "切换组",
+  "toggle_group_single_label": "单选",
+  "toggle_group_outline_label": "轮廓",
+  "toggle_group_spacing_label": "带间距",
+  "toggle_group_disabled_label": "禁用"
 }

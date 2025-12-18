@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Disabled",
   "toggle_italic": "Italic",
   "toggle_bookmark": "Bookmark",
-  "toggle_with_text_label": "With Text"
+  "toggle_with_text_label": "With Text",
+  "toggle_group_heading": "Toggle Group",
+  "toggle_group_single_label": "Single",
+  "toggle_group_outline_label": "Outline",
+  "toggle_group_spacing_label": "With Spacing",
+  "toggle_group_disabled_label": "Disabled"
 }

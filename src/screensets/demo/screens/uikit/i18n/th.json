@@ -652,5 +652,10 @@
   "toggle_disabled_label": "ปิดใช้งาน",
   "toggle_italic": "ตัวเอียง",
   "toggle_bookmark": "บุ๊กมาร์ก",
-  "toggle_with_text_label": "พร้อมข้อความ"
+  "toggle_with_text_label": "พร้อมข้อความ",
+  "toggle_group_heading": "กลุ่มสลับ",
+  "toggle_group_single_label": "เดี่ยว",
+  "toggle_group_outline_label": "โครงร่าง",
+  "toggle_group_spacing_label": "มีระยะห่าง",
+  "toggle_group_disabled_label": "ปิดใช้งาน"
 }

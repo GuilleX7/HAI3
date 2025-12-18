@@ -652,5 +652,10 @@
   "toggle_disabled_label": "Вимкнено",
   "toggle_italic": "Курсив",
   "toggle_bookmark": "Закладка",
-  "toggle_with_text_label": "З текстом"
+  "toggle_with_text_label": "З текстом",
+  "toggle_group_heading": "Група перемикачів",
+  "toggle_group_single_label": "Одиночний",
+  "toggle_group_outline_label": "Контур",
+  "toggle_group_spacing_label": "З відступами",
+  "toggle_group_disabled_label": "Вимкнено"
 }
