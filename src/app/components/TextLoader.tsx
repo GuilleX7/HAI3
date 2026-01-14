@@ -1,13 +1,12 @@
 /**
  * TextLoader Component - Prevents flash of untranslated content
  *
- * This component is part of your application's L4 layer (user code).
- * It was moved from @hai3/react to allow direct dependency on @hai3/uikit.
+ * Shows a skeleton loader while translations are being loaded.
  */
 
 import React from 'react';
 import { useTranslation } from '@hai3/react';
-import { Skeleton } from '@hai3/uikit';
+import { cn } from '@hai3/uikit';
 
 export interface TextLoaderProps {
   /** Child content to render when translations are loaded */
@@ -31,28 +30,6 @@ export interface TextLoaderProps {
   inheritColor?: boolean;
 }
 
-/**
- * TextLoader Component
- *
- * Generic wrapper for translated text that automatically shows a skeleton loader
- * while translations are being loaded. This eliminates the need for manual
- * loading state checks throughout the application.
- *
- * @example
- * ```tsx
- * // Heading - default bg-muted skeleton
- * <TextLoader skeletonClassName="h-10 w-64">
- *   <h1 className="text-4xl font-bold">{t('screen.title')}</h1>
- * </TextLoader>
- *
- * // Button label - inherits button text color
- * <Button>
- *   <TextLoader skeletonClassName="h-4 w-24" inheritColor>
- *     {t('button.submit')}
- *   </TextLoader>
- * </Button>
- * ```
- */
 export const TextLoader: React.FC<TextLoaderProps> = ({
   children,
   fallback,
@@ -71,11 +48,19 @@ export const TextLoader: React.FC<TextLoaderProps> = ({
 
     // Otherwise, use skeleton
     if (skeletonClassName) {
-      return <Skeleton className={skeletonClassName} inheritColor={inheritColor} />;
+      return (
+        <div
+          className={cn(
+            'animate-pulse rounded',
+            inheritColor ? 'bg-current opacity-20' : 'bg-muted',
+            skeletonClassName
+          )}
+        />
+      );
     }
 
-    // Default: return nothing
-    return null;
+    // Default skeleton
+    return <div className="animate-pulse bg-muted h-4 w-24 rounded" />;
   }
 
   // If className is provided, wrap in div, otherwise return children directly

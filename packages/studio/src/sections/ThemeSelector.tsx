@@ -1,14 +1,14 @@
 import React from 'react';
 import { upperFirst } from 'lodash';
 import { useTheme, useTranslation } from '@hai3/react';
-import { ButtonVariant } from '@hai3/uikit';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownButton,
+  Button,
 } from '@hai3/uikit';
+import { ChevronDown } from 'lucide-react';
 import { useStudioContext } from '../StudioProvider';
 
 /**
@@ -24,7 +24,7 @@ export const ThemeSelector: React.FC<ThemeSelectorProps> = ({
   className = '',
 }) => {
   const { currentTheme, themes, setTheme } = useTheme();
-  const { portalContainer } = useStudioContext();
+  const { portalContainer: _portalContainer } = useStudioContext();
   const { t } = useTranslation();
 
   const formatThemeName = (themeName: string): string => {
@@ -41,11 +41,12 @@ export const ThemeSelector: React.FC<ThemeSelectorProps> = ({
       </label>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <DropdownButton variant={ButtonVariant.Outline}>
+          <Button variant="outline" className="gap-1">
             {formatThemeName(currentTheme || '')}
-          </DropdownButton>
+            <ChevronDown className="h-4 w-4 opacity-50" />
+          </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" container={portalContainer} className="z-[99999] pointer-events-auto">
+        <DropdownMenuContent align="end" className="z-[99999] pointer-events-auto">
           {themes.map((theme) => (
             <DropdownMenuItem
               key={theme.id}

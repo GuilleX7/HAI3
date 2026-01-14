@@ -1,6 +1,5 @@
 import React from 'react';
 import { upperFirst } from 'lodash';
-import { ButtonVariant } from '@hai3/uikit';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -9,8 +8,9 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuSubContent,
   DropdownMenuItem,
-  DropdownButton,
+  Button,
 } from '@hai3/uikit';
+import { ChevronDown } from 'lucide-react';
 import { useTranslation } from '@hai3/react';
 import { useStudioContext } from '../StudioProvider';
 
@@ -38,7 +38,7 @@ export const ScreensetSelector: React.FC<ScreensetSelectorProps> = ({
   onChange,
   className = '',
 }) => {
-  const { portalContainer } = useStudioContext();
+  const { portalContainer: _portalContainer } = useStudioContext();
   const { t, isRTL } = useTranslation();
 
   // Format names
@@ -69,17 +69,18 @@ export const ScreensetSelector: React.FC<ScreensetSelectorProps> = ({
       </label>
       <DropdownMenu dir={isRTL ? 'rtl' : 'ltr'}>
         <DropdownMenuTrigger asChild>
-          <DropdownButton variant={ButtonVariant.Outline}>
+          <Button variant="outline" className="gap-1">
             {formatName(getCurrentDisplay())}
-          </DropdownButton>
+            <ChevronDown className="h-4 w-4 opacity-50" />
+          </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" container={portalContainer} className="z-[99999] pointer-events-auto">
+        <DropdownMenuContent align="end" className="z-[99999] pointer-events-auto">
           {options.map((categoryGroup) => (
             <DropdownMenuSub key={categoryGroup.category}>
               <DropdownMenuSubTrigger disabled={categoryGroup.screensets.length === 0}>
                 {formatName(categoryGroup.category)}
               </DropdownMenuSubTrigger>
-              <DropdownMenuSubContent container={portalContainer} className="z-[99999] pointer-events-auto">
+              <DropdownMenuSubContent className="z-[99999] pointer-events-auto">
                 {categoryGroup.screensets.map((item) => (
                   <DropdownMenuItem
                     key={item.id}

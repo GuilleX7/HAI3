@@ -1,22 +1,21 @@
 /**
  * Menu Component
  *
- * Side navigation menu displaying screenset menu items.
- * Uses @hai3/uikit Sidebar components for proper styling and collapsible behavior.
+ * Side navigation menu using shadcn-uikit Sidebar components.
  */
 
 import React from 'react';
-import { useAppSelector, useAppDispatch, useNavigation, useTranslation, type MenuState, type MenuItem } from '@hai3/react';
+import { useAppSelector, useNavigation, useTranslation, type MenuState, type MenuItem } from '@hai3/react';
 import {
   Sidebar,
   SidebarContent,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-  SidebarMenuIcon,
-  SidebarHeader,
+  SidebarTrigger,
+  useSidebar,
 } from '@hai3/uikit';
-import { menuActions } from '@hai3/framework';
 import { Icon } from '@iconify/react';
 import { HAI3LogoIcon } from '@/app/icons/HAI3LogoIcon';
 import { HAI3LogoTextIcon } from '@/app/icons/HAI3LogoTextIcon';
@@ -26,29 +25,22 @@ export interface MenuProps {
 }
 
 export const Menu: React.FC<MenuProps> = ({ children }) => {
-  const dispatch = useAppDispatch();
   const menuState = useAppSelector((state) => state['layout/menu'] as MenuState | undefined);
   const { currentScreen, navigateToScreen, currentScreenset } = useNavigation();
   const { t } = useTranslation();
+  const { state } = useSidebar();
 
-  const collapsed = menuState?.collapsed ?? false;
   const items: MenuItem[] = menuState?.items ?? [];
-
-  const handleToggleCollapse = () => {
-    dispatch(menuActions.toggleMenu());
-  };
+  const isCollapsed = state === 'collapsed';
 
   return (
-    <Sidebar collapsed={collapsed}>
-      {/* Logo/Brand area with collapse button */}
-      <SidebarHeader
-        logo={<HAI3LogoIcon />}
-        logoText={!collapsed ? <HAI3LogoTextIcon /> : undefined}
-        collapsed={collapsed}
-        onClick={handleToggleCollapse}
-      />
+    <Sidebar collapsible="icon">
+      <SidebarHeader className="flex flex-row items-center gap-2 p-4">
+        <HAI3LogoIcon />
+        {!isCollapsed && <HAI3LogoTextIcon />}
+        <SidebarTrigger className="ml-auto" />
+      </SidebarHeader>
 
-      {/* Menu items */}
       <SidebarContent>
         <SidebarMenu>
           {items.map((item: MenuItem) => {
@@ -59,12 +51,10 @@ export const Menu: React.FC<MenuProps> = ({ children }) => {
                 <SidebarMenuButton
                   isActive={isActive}
                   onClick={() => navigateToScreen(currentScreenset ?? '', item.id)}
-                  tooltip={collapsed ? t(item.label) : undefined}
+                  tooltip={isCollapsed ? t(item.label) : undefined}
                 >
                   {item.icon && (
-                    <SidebarMenuIcon>
-                      <Icon icon={item.icon} className="w-4 h-4" />
-                    </SidebarMenuIcon>
+                    <Icon icon={item.icon} className="w-4 h-4" />
                   )}
                   <span>{t(item.label)}</span>
                 </SidebarMenuButton>

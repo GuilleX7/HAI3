@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from '@hai3/react';
-import { Card } from '@hai3/uikit';
-import { Button, ButtonVariant, ButtonSize } from '@hai3/uikit';
+import { Card, Button } from '@hai3/uikit';
 import { useDraggable } from './hooks/useDraggable';
 import { useResizable } from './hooks/useResizable';
 import { useStudioContext } from './StudioProvider';
@@ -53,8 +52,8 @@ export const StudioPanel: React.FC = () => {
         >
           <h2 className="text-sm font-semibold text-foreground">{t('studio:title')}</h2>
           <Button
-            variant={ButtonVariant.Ghost}
-            size={ButtonSize.Sm}
+            variant="ghost"
+            size="sm"
             onClick={toggleCollapsed}
             className="h-7 w-7 p-0"
             aria-label={t('studio:aria.collapseButton')}

@@ -1,5 +1,4 @@
 import { useTranslation, LanguageDisplayMode, TextDirection, SUPPORTED_LANGUAGES, getLanguageMetadata, type Language } from '@hai3/react';
-import { ButtonVariant } from '@hai3/uikit';
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -7,6 +6,7 @@ import {
   DropdownMenuItem,
   Button,
 } from '@hai3/uikit';
+import { ChevronDown } from 'lucide-react';
 import { useStudioContext } from '../StudioProvider';
 
 /**
@@ -34,7 +34,7 @@ export function LanguageSelector({
   displayMode = LanguageDisplayMode.Native
 }: LanguageSelectorProps = {}) {
   const { t, language, setLanguage } = useTranslation();
-  const { portalContainer } = useStudioContext();
+  const { portalContainer: _portalContainer } = useStudioContext();
 
   const currentLanguage = language ? getLanguageMetadata(language) : null;
 
@@ -45,14 +45,15 @@ export function LanguageSelector({
       </label>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant={ButtonVariant.Outline}>
+          <Button variant="outline" className="gap-1">
             {currentLanguage
               ? (displayMode === LanguageDisplayMode.Native ? currentLanguage.name : currentLanguage.englishName)
               : FALLBACK_SELECT_LANGUAGE_TEXT
             }
+            <ChevronDown className="h-4 w-4 opacity-50" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" container={portalContainer} className="z-[99999] pointer-events-auto">
+        <DropdownMenuContent align="end" className="z-[99999] pointer-events-auto">
           {SUPPORTED_LANGUAGES.map((lang) => (
             <DropdownMenuItem
               key={lang.code}

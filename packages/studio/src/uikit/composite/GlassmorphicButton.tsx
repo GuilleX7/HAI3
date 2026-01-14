@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonVariant } from '@hai3/uikit';
+import { Button } from '@hai3/uikit';
 
 interface GlassmorphicButtonProps {
   icon: React.ReactNode;
@@ -23,7 +23,7 @@ export const GlassmorphicButton: React.FC<GlassmorphicButtonProps> = ({
 }) => {
   return (
     <Button
-      variant={ButtonVariant.Ghost}
+      variant="ghost"
       onMouseDown={onMouseDown}
       onClick={onClick}
       title={title}

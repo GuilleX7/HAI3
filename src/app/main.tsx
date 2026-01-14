@@ -3,8 +3,8 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HAI3Provider, apiRegistry, createHAI3App, type ThemeApplyFn } from '@hai3/react';
 import { Toaster, applyTheme } from '@hai3/uikit';
+import '@acronis/shadcn-uikit/styles'; // UI Kit styles
 import { AccountsApiService } from '@/app/api';
-import '@hai3/uikit/styles'; // UI Kit styles
 import '@/screensets/screensetRegistry'; // Auto-registers screensets (includes API services + mocks + i18n loaders)
 import '@/app/events/bootstrapEvents'; // Register app-level events (type augmentation)
 import { registerBootstrapEffects } from '@/app/effects/bootstrapEffects'; // Register app-level effects
@@ -23,7 +23,7 @@ apiRegistry.register(AccountsApiService);
 // Initialize API services
 apiRegistry.initialize({});
 
-// Create HAI3 app instance with theme apply function (constructor injection)
+// Create HAI3 app instance with theme apply function
 const app = createHAI3App({
   themes: { applyFn: applyTheme as ThemeApplyFn },
 });
